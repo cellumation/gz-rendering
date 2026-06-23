@@ -317,9 +317,10 @@ namespace gz
     {
       unsigned int count = this->ChildCount();
 
+      auto childs = this->Children();
       for (unsigned int i = 0; i < count; ++i)
       {
-        this->ChildByIndex(i)->PreRender();
+        childs->GetByIndex(i)->PreRender();
       }
     }
 
