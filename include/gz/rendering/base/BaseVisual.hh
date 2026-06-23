@@ -331,14 +331,11 @@ namespace gz
     void BaseVisual<T>::PreRenderChildren()
     {
       auto children_ =
-          std::dynamic_pointer_cast<BaseStore<gz::rendering::Node, T>>(
+          std::static_pointer_cast<BaseStore<gz::rendering::Node, T>>(
           this->Children());
-      if (!children_)
-      {
-        gzerr << "Cast failed in BaseVisual::PreRenderChildren" << std::endl;
-        return;
-      }
-      for (auto it = children_->Begin(); it != children_->End(); ++it)
+
+      const auto end = children_->End();
+      for (auto it = children_->Begin(); it != end; ++it)
       {
         (*it)->PreRender();
       }

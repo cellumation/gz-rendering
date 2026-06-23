@@ -38,9 +38,15 @@ namespace gz
 
       public: virtual ~BaseObject();
 
-      public: virtual unsigned int Id() const override;
+      public: virtual unsigned int Id() const override final
+      {
+        return id;
+      }
 
-      public: virtual std::string Name() const override;
+      public: virtual std::string Name() const override final
+      {
+        return name;
+      }
 
       // Documentation inherited.
       public: virtual void PreRender() override;

@@ -30,17 +30,7 @@ BaseObject::~BaseObject()
   this->Destroy();
 }
 
-//////////////////////////////////////////////////
-unsigned int BaseObject::Id() const
-{
-  return this->id;
-}
 
-//////////////////////////////////////////////////
-std::string BaseObject::Name() const
-{
-  return this->name;
-}
 
 //////////////////////////////////////////////////
 void BaseObject::PreRender()
