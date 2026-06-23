@@ -32,7 +32,7 @@ namespace gz
     class Ogre2MarkerPrivate;
 
     /// \brief Ogre 2.x implementation of a marker geometry.
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2Marker
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2Marker final
       : public BaseMarker<Ogre2Geometry>
     {
       /// \brief Constructor

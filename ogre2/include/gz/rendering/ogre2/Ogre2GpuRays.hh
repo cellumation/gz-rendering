@@ -63,7 +63,7 @@ namespace gz
     /// min/max angles and no. of samples. Each ray is a direction vector that
     /// is used to sample/lookup the range data stored in the faces of the
     /// cubemap.
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2GpuRays :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2GpuRays final :
       public BaseGpuRays<Ogre2Sensor>
     {
       /// \brief Constructor

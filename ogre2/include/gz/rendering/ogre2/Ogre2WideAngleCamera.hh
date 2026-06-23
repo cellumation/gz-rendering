@@ -34,7 +34,7 @@ namespace gz
     inline namespace GZ_RENDERING_VERSION_NAMESPACE {
     //
     /// \brief Ogre implementation of WideAngleCamera
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2WideAngleCamera :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2WideAngleCamera final :
         public BaseWideAngleCamera<Ogre2Sensor>
     {
       /// \brief Constructor

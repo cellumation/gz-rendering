@@ -54,7 +54,7 @@ namespace gz
     class Ogre2DepthCameraPrivate;
 
     /// \brief Depth camera used to render depth data into an image buffer
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2DepthCamera :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2DepthCamera final :
       public virtual BaseDepthCamera<Ogre2Sensor>,
       public virtual Ogre2ObjectInterface
     {

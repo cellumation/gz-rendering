@@ -50,7 +50,7 @@ namespace gz
     /// \brief Conversions Conversions.hh rendering/Conversions.hh
     /// \brief A set of utility function to convert between Gazebo and Ogre
     /// data types
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2Conversions
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2Conversions final
     {
       /// \brief Return the equivalent ogre color
       /// \param[in] _color gz-math color to convert

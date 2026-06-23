@@ -34,7 +34,7 @@ namespace gz
     inline namespace GZ_RENDERING_VERSION_NAMESPACE {
 
     /// \brief Ogre2 Implementation of a Lens Flare render pass.
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2LensFlarePass :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2LensFlarePass final :
       public BaseLensFlarePass<Ogre2RenderPass>
     {
       /// \brief Constructor

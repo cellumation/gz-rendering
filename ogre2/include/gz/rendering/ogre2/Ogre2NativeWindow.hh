@@ -36,7 +36,7 @@ namespace gz
     class Ogre2NativeWindowPrivate;
 
     /// \brief Ogre2 implementation of NativeWindow
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2NativeWindow :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2NativeWindow final :
       public virtual BaseNativeWindow
     {
       /// \brief Constructor
