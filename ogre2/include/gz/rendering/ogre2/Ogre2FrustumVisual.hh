@@ -35,7 +35,7 @@ namespace gz
     class Ogre2FrustumVisualPrivate;
 
     /// \brief Ogre 2.x implementation of a Frustum Visual.
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2FrustumVisual
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2FrustumVisual final
       : public BaseFrustumVisual<Ogre2Visual>
     {
       /// \brief Constructor

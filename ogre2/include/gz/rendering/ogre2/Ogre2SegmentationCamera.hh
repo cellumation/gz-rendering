@@ -46,7 +46,7 @@ namespace gz
 
     /// \brief Segmentation camera used to label each pixel with a label id.
     /// Supports Semantic / Panoptic Segmentation
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2SegmentationCamera :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2SegmentationCamera final :
       public virtual BaseSegmentationCamera<Ogre2Sensor>,
       public virtual Ogre2ObjectInterface
     {

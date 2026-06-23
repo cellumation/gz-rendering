@@ -33,7 +33,7 @@ namespace gz
     inline namespace GZ_RENDERING_VERSION_NAMESPACE {
 
     /// \brief Ogre 2.x implementation of a Projector class.
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2Projector :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2Projector final :
       public BaseProjector<Ogre2Visual>
     {
       /// \brief Constructor.

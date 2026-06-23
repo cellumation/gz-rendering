@@ -43,7 +43,7 @@ namespace gz
     class Ogre2SubMeshStoreFactoryPrivate;
 
     /// \brief Ogre2.x implementation of the mesh factory class
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2MeshFactory
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2MeshFactory final
     {
       /// \brief Constructor
       /// \param[in] _scene Pointer to the scene
@@ -103,7 +103,7 @@ namespace gz
     };
 
     /// \brief Ogre2.x implementation of a submesh store factory class
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2SubMeshStoreFactory
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2SubMeshStoreFactory final
     {
       /// \brief Constructor
       /// \param[in] _scene Pointer to the scene object

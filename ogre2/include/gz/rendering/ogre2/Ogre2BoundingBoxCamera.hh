@@ -43,7 +43,7 @@ namespace gz
 
     /// \brief BoundingBox camera used to detect 2d / 3d bounding boxes
     /// of labeled objects in the scene
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2BoundingBoxCamera :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2BoundingBoxCamera final :
       public BaseBoundingBoxCamera<Ogre2Sensor>
     {
       /// \brief Constructor

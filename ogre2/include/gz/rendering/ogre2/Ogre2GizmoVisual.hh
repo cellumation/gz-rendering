@@ -26,7 +26,7 @@ namespace gz
   {
     inline namespace GZ_RENDERING_VERSION_NAMESPACE {
     //
-    class GZ_RENDERING_OGRE2_VISIBLE Ogre2GizmoVisual :
+    class GZ_RENDERING_OGRE2_VISIBLE Ogre2GizmoVisual final :
       public BaseGizmoVisual<Ogre2Visual>
     {
       /// \brief Constructor
