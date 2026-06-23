@@ -20,6 +20,7 @@
   <depend>libfreeimage-dev</depend>
   <depend>libglew-dev</depend>
   <depend>libogre-dev</depend>
+  <depend>gz_ogre_next_vendor</depend>
   <depend>libogre-next-2.3-dev</depend>
   <depend>libvulkan-dev</depend>
   <depend>libxi-dev</depend>

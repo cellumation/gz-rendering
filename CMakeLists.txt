@@ -106,6 +106,9 @@ if(USE_OGRE2_OVERLAY)
   set(GZ_RENDERING_HAVE_OGRE2_OVERLAY TRUE)
 endif()
 
+gz_find_package(gz_ogre_next_vendor
+    REQUIRED)
+
 gz_find_package(GzOGRE2 VERSION 2.3.1
     COMPONENTS ${OGRE2_COMPONENTS}
     PRIVATE_FOR ogre2
