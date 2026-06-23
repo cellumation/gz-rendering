@@ -315,12 +315,14 @@ namespace gz
     template <class T>
     void BaseNode<T>::PreRenderChildren()
     {
-      unsigned int count = this->ChildCount();
-
-      auto childs = this->Children();
-      for (unsigned int i = 0; i < count; ++i)
+      const auto childs = this->Children();
+      const auto children_ =
+          std::static_pointer_cast<BaseStore<gz::rendering::Node, T>>(
+          childs);
+      const auto end = children_->End();
+      for(auto it = children_->Begin(); it != end; it++)
       {
-        childs->GetByIndex(i)->PreRender();
+        (*it)->PreRender();
       }
     }
 
