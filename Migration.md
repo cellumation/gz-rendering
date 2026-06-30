@@ -5,6 +5,42 @@ Deprecated code produces compile-time warnings. These warning serve as
 notification to users that their code should be upgraded. The next major
 release will remove the deprecated code.
 
+## Gazebo Rendering 10.x to 11.x
+
+### Optimizations
+
+* A Persistent GPU->CPU readback to avoid duplicate copies was introduced
+  in [Pull request #1303](https://github.com/gazebosim/gz-rendering/pull/1303),
+  although the end result is expected to be the same, it can be reverted
+  in the presence of errors setting their environment variable
+  `GZ_RENDERING_OGRE2_LEGACY_READBACK`.
+
+* The number of ogre threads spawn by default has changed from being the
+  number of cores of the host computer to zero to reduce the CPU usage
+  in https://github.com/gazebosim/gz-rendering/pull/1302. It can be
+  fine-tunning by using the environment variable
+  GZ_RENDERING_OGRE2_WORKER_THREADS=<number>.
+
+### Removals
+
+The optix plugin has been removed due to years of inactivity. The plugin was
+last tested with Optix SDK version 4.0.2, and there are no known plans on
+upgrading it to support the latest version of Optix. The optix plugin was
+never built and tested on the CIs so it was unclear if it was still working,
+hence the decision was to remove the plugin directly without going through
+a deprecation cycle.
+* Issue: https://github.com/gazebosim/gz-rendering/issues/1203
+* Pull request: https://github.com/gazebosim/gz-rendering/issues/1204
+
+The dependency on ogre2's Overlay component is removed, mainly due to:
+https://github.com/OGRECave/ogre-next/issues/541.
+The `Ogre::v1::OverlaySystem` was not used internally and the
+relevant API was always marked as internal so it is removed in
+gz-rendering11 instead of going through the tick-tock deprecation cycle.
+
+1. **Ogre2RenderEngine**
+    + Removed: `Ogre::v1::OverlaySystem *OverlaySystem() const`
+
 ## Gazebo Rendering 9.x to 10.x
 
 ### Deprecations
